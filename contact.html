@@ -9,11 +9,41 @@
                 <a href="contact.html">Contact</a>
             </nav> 
         </header>
-        <section>
-            <h2>Contact Us</h2>
-            <p>If you have any questions or suggestions, feel free to reach out to us!</p>
-            <p>Email: info@budgetplaces.com</p>
-            <p>Twitter: @budgetplaces</p>
-        </section>
+        <form>
+
+    <fieldset>
+        <legend>Your details</legend>
+
+        <p>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+
+        <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="subject">Subject</label><br>
+            <select id="subject" name="subject">
+                <option value="suggest-place">Suggest a place</option>
+                <option value="correct-detail">Correct a detail</option>
+                <option value="ask-question">Ask a question</option>
+                <option value="travel-tip">Share a travel tip</option>
+                <option value="other">Something else</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" required></textarea>
+        </p>
+
+        <button type="submit">Send message</button>
+
+    </fieldset>
+
+</form>
     </body>
 </html>
