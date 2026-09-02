@@ -20,5 +20,54 @@
                 </td>
             </tr>
         </table>
+        <form>
+        <h2>Suggest a Place</h2>
+
+        <label for="place-name">Place Name:</label>
+        <input type="text" id="place-name" name="place-name" required>
+
+        <fieldset>
+            <legend>Category</legend>
+
+            <label>
+                <input type="radio" name="category" value="food">
+                Food
+            </label>
+
+            <label>
+                <input type="radio" name="category" value="study">
+                Study Spot
+            </label>
+
+            <label>
+                <input type="radio" name="category" value="outdoors">
+                Outdoors
+            </label>
+        </fieldset>
+
+        <p>What's good about it?</p>
+
+        <label>
+            <input type="checkbox" name="good-points" value="affordable">
+            Affordable
+        </label>
+
+        <label>
+            <input type="checkbox" name="good-points" value="wifi">
+            Good Wi-Fi
+        </label>
+
+        <label>
+            <input type="checkbox" name="good-points" value="quiet">
+            Quiet
+        </label>
+
+        <br><br>
+
+        <label for="email">Contact Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Suggest Place</button>
+    </form>
     </body>
 </html>
