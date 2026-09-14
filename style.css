@@ -28,46 +28,65 @@ body {
 
 
 /* =========================
-   3. LAYOUT REGIONS
+   3. FLEXBOX HEADER
 ========================= */
 
-header {
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--brand);
     color: white;
-    text-align: center;
-    padding: 40px 20px;
+    padding: 25px 40px;
 }
 
-header h1 {
+.site-header h1 {
     margin: 0;
 }
 
-nav {
-    background-color: var(--dark-ink);
-    padding: 12px;
+.site-header nav {
+    padding: 0;
 }
 
-nav ul {
+.site-header nav ul {
+    display: flex;
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 15px;
+.site-header nav li {
+    /* Flexbox replaces display: inline-block */
 }
 
-nav a {
+.site-header nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: var(--brand);
+.site-header nav a:hover {
+    color: var(--light-background);
 }
+
+
+/* =========================
+   4. CENTRED SECTION
+========================= */
+
+.guide-banner {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* =========================
+   5. LAYOUT REGIONS
+========================= */
 
 main {
     max-width: 1100px;
@@ -84,7 +103,7 @@ footer {
 
 
 /* =========================
-   4. PLACE CARDS
+   6. PLACE CARDS
 ========================= */
 
 .place-card {
@@ -125,7 +144,7 @@ footer {
 
 
 /* =========================
-   5. PLACE DETAILS
+   7. PLACE DETAILS
 ========================= */
 
 table {
@@ -160,7 +179,7 @@ table img {
 
 
 /* =========================
-   6. SUGGEST A PLACE FORM
+   8. SUGGEST A PLACE FORM
 ========================= */
 
 form {
@@ -207,7 +226,7 @@ textarea {
 
 
 /* =========================
-   7. FOCUS STATE
+   9. FOCUS STATE
 ========================= */
 
 input:focus,
@@ -218,7 +237,7 @@ textarea:focus {
 
 
 /* =========================
-   8. SUBMIT BUTTON
+   10. SUBMIT BUTTON
 ========================= */
 
 button {
