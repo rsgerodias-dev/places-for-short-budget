@@ -62,6 +62,7 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -124,7 +125,42 @@ footer {
 
 
 /* =========================
-   5. SUGGEST A PLACE FORM
+   5. PLACE DETAILS
+========================= */
+
+table {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+th,
+td {
+    padding: 15px;
+}
+
+th h1 {
+    color: var(--brand);
+    font-size: 32px;
+}
+
+th p {
+    color: var(--muted-grey);
+    font-size: 18px;
+}
+
+table img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   6. SUGGEST A PLACE FORM
 ========================= */
 
 form {
@@ -148,7 +184,8 @@ legend {
     padding: 0 8px;
 }
 
-input {
+input,
+textarea {
     padding: 10px;
     border: 1px solid var(--muted-grey);
     border-radius: 4px;
@@ -162,9 +199,15 @@ input[type="email"] {
     margin-bottom: 15px;
 }
 
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+}
+
 
 /* =========================
-   6. FOCUS STATE
+   7. FOCUS STATE
 ========================= */
 
 input:focus,
@@ -175,7 +218,7 @@ textarea:focus {
 
 
 /* =========================
-   7. SUBMIT BUTTON
+   8. SUBMIT BUTTON
 ========================= */
 
 button {
