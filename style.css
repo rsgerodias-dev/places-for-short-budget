@@ -56,10 +56,6 @@ body {
     margin: 0;
 }
 
-.site-header nav li {
-    /* Flexbox replaces display: inline-block */
-}
-
 .site-header nav a {
     color: white;
     text-decoration: none;
@@ -103,15 +99,28 @@ footer {
 
 
 /* =========================
-   6. PLACE CARDS
+   6. PLACE GRID
+========================= */
+
+.place-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
+}
+
+
+/* =========================
+   7. PLACE CARDS
 ========================= */
 
 .place-card {
+    flex: 1 1 240px;
     background-color: white;
     border-radius: 12px;
     border-left: 6px solid var(--brand);
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .place-card h3 {
@@ -144,7 +153,7 @@ footer {
 
 
 /* =========================
-   7. PLACE DETAILS
+   8. PLACE DETAILS
 ========================= */
 
 table {
@@ -179,7 +188,7 @@ table img {
 
 
 /* =========================
-   8. SUGGEST A PLACE FORM
+   9. SUGGEST A PLACE FORM
 ========================= */
 
 form {
@@ -226,7 +235,7 @@ textarea {
 
 
 /* =========================
-   9. FOCUS STATE
+   10. FOCUS STATE
 ========================= */
 
 input:focus,
@@ -237,7 +246,7 @@ textarea:focus {
 
 
 /* =========================
-   10. SUBMIT BUTTON
+   11. SUBMIT BUTTON
 ========================= */
 
 button {
