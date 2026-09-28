@@ -1,6 +1,6 @@
 /* =========================
    1. VARIABLES
-========================= */
+   ========================= */
 
 :root {
     --brand: #2f6f5e;
@@ -12,7 +12,7 @@
 
 /* =========================
    2. BASE STYLES
-========================= */
+   ========================= */
 
 * {
     box-sizing: border-box;
@@ -28,23 +28,24 @@ body {
 
 
 /* =========================
-   3. PAGE GRID
-========================= */
+   3. PAGE GRID - MOBILE FIRST
+   ========================= */
 
 .page {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "side main"
-        "foot foot";
+        "masthead"
+        "main"
+        "side"
+        "foot";
     gap: 16px;
 }
 
 
 /* =========================
    4. GRID AREAS
-========================= */
+   ========================= */
 
 .site-header {
     grid-area: masthead;
@@ -64,8 +65,23 @@ footer {
 
 
 /* =========================
-   5. FLEXBOX HEADER
-========================= */
+   5. TABLET AND LARGER
+   ========================= */
+
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side main"
+            "foot foot";
+    }
+}
+
+
+/* =========================
+   6. FLEXBOX HEADER
+   ========================= */
 
 .site-header {
     display: flex;
@@ -104,8 +120,8 @@ footer {
 
 
 /* =========================
-   6. SIDEBAR
-========================= */
+   7. SIDEBAR
+   ========================= */
 
 aside {
     background-color: white;
@@ -124,8 +140,8 @@ aside ul {
 
 
 /* =========================
-   7. CENTRED SECTION
-========================= */
+   8. CENTRED SECTION
+   ========================= */
 
 .guide-banner {
     height: 300px;
@@ -137,8 +153,8 @@ aside ul {
 
 
 /* =========================
-   8. MAIN CONTENT
-========================= */
+   9. MAIN CONTENT
+   ========================= */
 
 main {
     padding: 30px 20px;
@@ -146,8 +162,8 @@ main {
 
 
 /* =========================
-   9. FOOTER
-========================= */
+   10. FOOTER
+   ========================= */
 
 footer {
     background-color: var(--dark-ink);
@@ -158,8 +174,8 @@ footer {
 
 
 /* =========================
-   10. PLACE GRID
-========================= */
+   11. PLACE GRID
+   ========================= */
 
 .place-grid {
     display: flex;
@@ -169,8 +185,8 @@ footer {
 
 
 /* =========================
-   11. PLACE CARDS
-========================= */
+   12. PLACE CARDS
+   ========================= */
 
 .place-card {
     flex: 1 1 240px;
@@ -210,8 +226,8 @@ footer {
 
 
 /* =========================
-   12. PLACE DETAILS
-========================= */
+   13. PLACE DETAILS
+   ========================= */
 
 table {
     width: 90%;
@@ -245,8 +261,8 @@ table img {
 
 
 /* =========================
-   13. SUGGEST A PLACE FORM
-========================= */
+   14. SUGGEST A PLACE FORM
+   ========================= */
 
 form {
     max-width: 700px;
@@ -292,8 +308,8 @@ textarea {
 
 
 /* =========================
-   14. FOCUS STATE
-========================= */
+   15. FOCUS STATE
+   ========================= */
 
 input:focus,
 textarea:focus {
@@ -303,8 +319,8 @@ textarea:focus {
 
 
 /* =========================
-   15. SUBMIT BUTTON
-========================= */
+   16. SUBMIT BUTTON
+   ========================= */
 
 button {
     background-color: var(--brand);
