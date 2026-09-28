@@ -28,7 +28,43 @@ body {
 
 
 /* =========================
-   3. FLEXBOX HEADER
+   3. PAGE GRID
+========================= */
+
+.page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side main"
+        "foot foot";
+    gap: 16px;
+}
+
+
+/* =========================
+   4. GRID AREAS
+========================= */
+
+.site-header {
+    grid-area: masthead;
+}
+
+aside {
+    grid-area: side;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: foot;
+}
+
+
+/* =========================
+   5. FLEXBOX HEADER
 ========================= */
 
 .site-header {
@@ -68,7 +104,27 @@ body {
 
 
 /* =========================
-   4. CENTRED SECTION
+   6. SIDEBAR
+========================= */
+
+aside {
+    background-color: white;
+    padding: 20px;
+    border-left: 6px solid var(--brand);
+}
+
+aside h2,
+aside h3 {
+    color: var(--brand);
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+
+/* =========================
+   7. CENTRED SECTION
 ========================= */
 
 .guide-banner {
@@ -81,14 +137,17 @@ body {
 
 
 /* =========================
-   5. LAYOUT REGIONS
+   8. MAIN CONTENT
 ========================= */
 
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    padding: 30px 20px;
 }
+
+
+/* =========================
+   9. FOOTER
+========================= */
 
 footer {
     background-color: var(--dark-ink);
@@ -99,19 +158,18 @@ footer {
 
 
 /* =========================
-   6. PLACE GRID
+   10. PLACE GRID
 ========================= */
 
 .place-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    align-items: stretch;
 }
 
 
 /* =========================
-   7. PLACE CARDS
+   11. PLACE CARDS
 ========================= */
 
 .place-card {
@@ -120,7 +178,6 @@ footer {
     border-radius: 12px;
     border-left: 6px solid var(--brand);
     padding: 20px;
-    margin-bottom: 0;
 }
 
 .place-card h3 {
@@ -153,7 +210,7 @@ footer {
 
 
 /* =========================
-   8. PLACE DETAILS
+   12. PLACE DETAILS
 ========================= */
 
 table {
@@ -188,7 +245,7 @@ table img {
 
 
 /* =========================
-   9. SUGGEST A PLACE FORM
+   13. SUGGEST A PLACE FORM
 ========================= */
 
 form {
@@ -235,7 +292,7 @@ textarea {
 
 
 /* =========================
-   10. FOCUS STATE
+   14. FOCUS STATE
 ========================= */
 
 input:focus,
@@ -246,7 +303,7 @@ textarea:focus {
 
 
 /* =========================
-   11. SUBMIT BUTTON
+   15. SUBMIT BUTTON
 ========================= */
 
 button {
